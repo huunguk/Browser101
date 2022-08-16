@@ -3,12 +3,10 @@ const input = document.querySelector(".footer_input");
 const addBtn = document.querySelector(".footer_button");
 const form = document.querySelector(".new-form");
 
-
-form.addEventListener('submit', event => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   onAdd();
-})
-
+});
 
 function onAdd() {
   //1. 사용자가 입력한 텍스트를 받아온다.
@@ -18,7 +16,7 @@ function onAdd() {
     return;
   }
   console.log(text);
-  //2. 새로운 아이템을 만든다. (텍스트 + 삭제 버튼)
+  //2. 새로운 아이템을 만든다.(텍스트 + 삭제 버튼)
   const item = createItem(text);
   //3. items 컨테이너안에 새로 만든 아이템을 추가.
   items.appendChild(item);
@@ -46,8 +44,6 @@ function createItem(text) {
   id++;
   return itemRow;
 }
-
-
 
 items.addEventListener("click", (event) => {
   const id = event.target.dataset.id;

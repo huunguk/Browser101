@@ -40,6 +40,8 @@ body {
   margin-top: 8px;
   border-radius: 20px;
   visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game_score {
@@ -53,6 +55,8 @@ body {
   border-radius: 50%;
   border: 3px solid black;
   visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game_header {
@@ -98,4 +102,14 @@ body {
 .pop_up_message {
   display: block;
   font-size: 42px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }
